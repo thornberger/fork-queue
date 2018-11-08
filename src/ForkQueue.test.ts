@@ -3,7 +3,7 @@ import {InvalidConfigError} from "./errors/InvalidConfigError";
 import {QueueFullError} from "./errors/QueueFullError";
 import {ForkQueue} from "./ForkQueue";
 import {ForkQueueConfig} from "./ForkQueueConfig";
-import {TaskInterface} from "./task/TaskInterface";
+import {ForkQueueTask} from "./ForkQueueTask";
 
 interface MockChildProcess {
     mock: Partial<ChildProcess>;
@@ -25,7 +25,7 @@ describe("ForkQueue", () => {
         maxQueueSize: 4,
         pollingPeriodSeconds: 1,
     };
-    const task: TaskInterface = {
+    const task: ForkQueueTask = {
         getArgs: () => [],
         getCommand: () => "cmd",
         getCwd: () => "cwd",

@@ -2,12 +2,12 @@ import {fork, ForkOptions} from "child_process";
 import {InvalidConfigError} from "./errors/InvalidConfigError";
 import {QueueFullError} from "./errors/QueueFullError";
 import {ForkQueueConfig} from "./ForkQueueConfig";
-import {TaskInterface} from "./task/TaskInterface";
+import {ForkQueueTask} from "./ForkQueueTask";
 
 export class ForkQueue {
     private readonly config: ForkQueueConfig;
-    private queuedTasks: TaskInterface[] = [];
-    private runningTasks: { [pid: number]: TaskInterface; } = [];
+    private queuedTasks: ForkQueueTask[] = [];
+    private runningTasks: { [pid: number]: ForkQueueTask; } = [];
 
     public constructor(config: ForkQueueConfig) {
         this.config = config;
@@ -30,7 +30,7 @@ export class ForkQueue {
         setTimeout(this.start, this.config.pollingPeriodSeconds * 1000);
     }
 
-    public enqueue(task: TaskInterface): void {
+    public enqueue(task: ForkQueueTask): void {
         if (this.queuedTasks.length === this.config.maxQueueSize) {
             throw new QueueFullError(task, this.config.maxQueueSize);
         }
@@ -72,7 +72,7 @@ export class ForkQueue {
         delete this.runningTasks[pid];
     }
 
-    private getOptions(task: TaskInterface): ForkOptions {
+    private getOptions(task: ForkQueueTask): ForkOptions {
         return {
             cwd: task.getCwd(),
         };
