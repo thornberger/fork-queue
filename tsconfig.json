@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": ["es5","es6"],
-    "module": "commonjs",
-    "outDir": "dist",
-    "inlineSourceMap": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -14,7 +14,9 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "declaration": true
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist"
   },
   "include": [
     "src/**/*.ts"

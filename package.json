@@ -2,20 +2,23 @@
   "name": "ts-fork-queue",
   "version": "0.1.5",
   "description": "A simple fork queue. Schedules enqueued tasks from a queue and runs them in a new process.",
+  "files": [
+    "/dist"
+  ],
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/thornberger/fork-queue.git",
   "author": "Tobias Hornberger <tobias.hornberger@falsemirror.de>",
   "license": "MIT",
   "private": false,
-  "files": [
-    "/dist"
-  ],
   "devDependencies": {
     "@types/jest": "^23.3.9",
     "@types/node": "^10.12.3",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",
+    "rollup": "^0.67.3",
+    "rollup-plugin-typescript2": "^0.18.0",
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-eslint-rules": "^5.4.0",
@@ -39,9 +42,11 @@
     ]
   },
   "scripts": {
-    "build": "tsc -m system --outFile dist/index.js",
+    "build": "rollup -c",
     "test": "jest",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
-  "dependencies": {}
+  "dependencies": {
+    "remove": "^0.1.5"
+  }
 }
