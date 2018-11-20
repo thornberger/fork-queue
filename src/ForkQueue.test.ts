@@ -215,6 +215,6 @@ describe("ForkQueue", () => {
 
         expect(() => {
             queue.enqueue(task);
-        }).toThrow(QueueFullError);
+        }).toThrow(new QueueFullError(task, 4));
     });
 });
