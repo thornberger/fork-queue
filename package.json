@@ -1,11 +1,9 @@
 {
   "name": "ts-fork-queue",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A simple fork queue. Schedules enqueued tasks from a queue and runs them in a new process.",
   "files": [
-    "/dist/index.js",
-    "/dist/index.es.js",
-    "/dist/index.d.ts"
+    "/dist"
   ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
