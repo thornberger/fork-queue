@@ -16,7 +16,8 @@
     "emitDecoratorMetadata": true,
     "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "./dist"
+    "declarationDir": "./dist",
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.ts"
