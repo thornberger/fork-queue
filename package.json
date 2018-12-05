@@ -1,6 +1,6 @@
 {
   "name": "ts-fork-queue",
-  "version": "0.1.13",
+  "version": "0.1.15",
   "description": "A simple fork queue. Schedules enqueued tasks from a queue and runs them in a new process.",
   "files": [
     "/dist"
