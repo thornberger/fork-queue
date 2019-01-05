@@ -18,27 +18,21 @@ The scheduler however does not take care of shutting down tasks. Tasks need to t
 # Usage
 Create a new `ForkQueue` object with the desired configuration (see below). Start the scheduler with `queue.start()` and add tasks to be forked  calling `queue.enqueue()`.
 
-```
+```js
 import {ForkQueue} from "ts-fork-queue";
 
 const queue = new ForkQueue({
-    maxQueueSize: 5;
-    maxParallelism: 3;
-    pollingPeriodSeconds: 2;
+    maxQueueSize: 5,
+    maxParallelism: 3,
+    pollingPeriodSeconds: 2
 });
 queue.start();
 
 queue.enqueue({
-    getCommand: () => {
-        '/path/to/my/module'
-    };
-    getArgs: () => {
-        'foo'
-    };
-    getCwd(): () => {
-        '/home/foo/bar'
-    };
-    toString: () => 'myCommand';
+    getCommand: () => '/path/to/my/module',
+    getArgs: () => 'foo',
+    getCwd: () => '/home/foo/bar',
+    toString: () => 'myCommand'
 });
 ```
 Task objects must provide methods to execute a nodejs module.
