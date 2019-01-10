@@ -13,11 +13,11 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@types/jest": "^23.3.11",
+    "@types/jest": "^23.3.12",
     "@types/node": "^10.12.18",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",
-    "rollup": "^1.0.2",
+    "rollup": "^1.1.0",
     "rollup-plugin-typescript2": "^0.18.1",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
@@ -46,7 +46,5 @@
     "test": "jest",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
-  "dependencies": {
-    "remove": "^0.1.5"
-  }
+  "dependencies": {}
 }
