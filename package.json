@@ -49,6 +49,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "release": "yarn build && yarn publish",
     "test": "jest",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
