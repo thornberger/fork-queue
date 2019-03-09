@@ -31,12 +31,10 @@
     "typescript": "^3.3.3333"
   },
   "jest": {
+    "preset": "ts-jest",
     "roots": [
       "<rootDir>/src"
     ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
     "testRegex": "(/test/.*|(\\.|/)test)\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
