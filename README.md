@@ -21,7 +21,7 @@ The scheduler however does not take care of shutting down tasks. Tasks need to t
 # Usage
 Create a new `ForkQueue` object with the desired configuration (see below). Start the scheduler with `queue.start()` and add tasks to be forked  calling `queue.enqueue()`.
 
-```js
+```typescript
 import {ForkQueue} from "ts-fork-queue";
 
 const queue = new ForkQueue({
