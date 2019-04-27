@@ -20,14 +20,14 @@
   "private": false,
   "devDependencies": {
     "@types/jest": "^24.0.11",
-    "@types/node": "^11.12.0",
-    "jest": "^24.5.0",
-    "rollup": "^1.7.4",
+    "@types/node": "^11.13.8",
+    "jest": "^24.7.1",
+    "rollup": "^1.10.1",
     "rollup-plugin-typescript2": "^0.21.0",
-    "ts-jest": "^24.0.0",
-    "tslint": "^5.14.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.4.5"
   },
   "jest": {
     "preset": "ts-jest",
@@ -51,6 +51,6 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "codecov": "^3.2.0"
+    "codecov": "^3.3.0"
   }
 }

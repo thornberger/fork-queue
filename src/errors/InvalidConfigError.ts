@@ -5,7 +5,7 @@ export class InvalidConfigError extends Error {
         message += ` Config: maxQueueSize = ${config.maxQueueSize}, ` +
             `maxParallelism = ${config.maxParallelism}, ` +
             `pollingPeriodSeconds = ${config.pollingPeriodSeconds}`;
-
+        /* istanbul ignore next */
         super(message);
     }
 }
