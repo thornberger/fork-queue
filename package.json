@@ -59,6 +59,6 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "codecov": "^3.5.0"
+    "codecov": "3.5.0"
   }
 }
