@@ -1,6 +1,5 @@
 [![Travis](https://travis-ci.org/thornberger/fork-queue.svg?branch=master)](https://travis-ci.org/thornberger/fork-queue)
 [![Codecov](https://codecov.io/gh/thornberger/fork-queue/branch/master/graph/badge.svg)](https://codecov.io/gh/thornberger/fork-queue)
-[![Greenkeeper](https://badges.greenkeeper.io/thornberger/fork-queue.svg)](https://greenkeeper.io/)
 [![NPM](https://img.shields.io/npm/v/ts-fork-queue.svg)](https://www.npmjs.com/package/ts-fork-queue)
 # ts-fork-queue
 A minimalistic nodejs fork queue with typescript support.
